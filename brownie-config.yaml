@@ -1,0 +1,23 @@
+dependencies:
+  - smartcontractkit/chainlink@1.4.1
+  - OpenZeppelin/openzeppelin-contracts@4.6.0
+
+compiler:
+  solc:
+    remappings:
+      - '@chainlink=smartcontractkit/chainlink@1.4.1'
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.6.0'
+
+networks:
+  mainnet-fork:  # to fork net, run 'make fork-mainnet'
+    eth_usd_price_feed: '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419'
+    vrf_coordinator: '0xf0d54349aDdcf704F77AE15b96510dEA15cb7952'
+    link_token: '0x514910771AF9Ca656af840dff83E8264EcF986CA'
+
+  rinkeby:
+    eth_usd_price_feed: '0x8A753747A1Fa494EC906cE90E9f37563A8AF630e'
+    vrf_coordinator: '0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B'
+    link_token: '0x01BE23585060835E02B77ef475b0Cc51aA1e0709'
+    verify: true
+
+dotenv: .env

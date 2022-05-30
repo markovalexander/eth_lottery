@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "eth_lottery"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+pydantic = "^1.9.1"
+black = "^22.3.0"
+pylint = "^2.13.9"
+flake8 = "^4.0.1"
+mypy = "^0.960"
+isort = "^5.10.1"
+eth-brownie = "^1.19.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

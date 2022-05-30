@@ -1,0 +1,7 @@
+.hypothesis
+*cache
+soljson*
+.env
+__pycache__
+build
+reports
