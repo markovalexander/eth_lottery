@@ -1,5 +1,5 @@
 LOCALHOST ?= http://127.0.0.1
-FORK_URL ?= https://eth-mainnet.alchemyapi.io/v2/OE8e4qm_m7BKlL_cxnhP4TL8lfgR0LSq
+FORK_URL ?= https://eth-mainnet.alchemyapi.io/v2/$(ALCHEMY_KEY)
 
 compile:
 	brownie compile
