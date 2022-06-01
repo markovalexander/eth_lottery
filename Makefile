@@ -1,10 +1,13 @@
 LOCALHOST ?= http://127.0.0.1
+
+
 FORK_URL ?= https://eth-mainnet.alchemyapi.io/v2/$(ALCHEMY_KEY)
 
 compile:
 	brownie compile
 
 fork-mainnet:
+	$(if $(ALCHEMY_KEY),, $(error ALCHEMY_KEY must be given))
 	brownie networks add development mainnet-fork cmd=ganache-cli host=$(LOCALHOST) fork=$(FORK_URL) gas_limit=12000000 accounts=10 mnemonic=brownie port=8545 
 
 testnet-%:
